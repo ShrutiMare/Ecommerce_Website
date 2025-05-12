@@ -1,0 +1,192 @@
+/* Adjusting navbar layout */
+#navbar1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Search bar styling */
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: white;
+    padding: 3px;
+    width: 100%;
+    max-width: 600px;
+}
+
+input[name="searchbar"] {
+    padding: 8px;
+    border: none;
+    border-radius: 30px 0 0 30px;
+    width: 100%;
+    flex-grow: 1;
+    outline: none;
+}
+
+button.search-button {
+    padding: 6px 15px;
+    background-color: transparent;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    border-left: 1px solid #ccc;
+    border-radius: 0 30px 30px 0;
+}
+
+/* Aligning Reorder, Wishlist, Sign in, and Account next to search */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-actions a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Cart button separate */
+.cart-button {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Secondary navbar */
+#navbar-secondary {
+    background-color: #fff;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#navbar-secondary ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+#navbar-secondary li {
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #navbar1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-container {
+        max-width: 90%;
+    }
+
+    .nav-actions {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #navbar-secondary ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Container for products */
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Fixed 4 columns */
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Fixed-size product cards */
+.card {
+    width: 250px; /* Fixed width */
+    height: 355px; /* Fixed height */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Product images - fixed size */
+#prodimg {
+    width: 100%; /* Full width */
+    height: 180px; /* Fixed height */
+    object-fit: cover; /* Prevents stretching */
+}
+
+/* Ensure uniform text height */
+.card p {
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Fix button position */
+.card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: auto; /* Pushes button to the bottom */
+    text-decoration: none;
+}
+
+.card button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive: Adjust to 2 columns on smaller screens */
+@media (max-width: 768px) {
+    .products-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsive: 1 column on very small screens */
+@media (max-width: 480px) {
+    .products-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Logo size */
+#logo {
+    height: 36px;
+    width: 121px;
+}

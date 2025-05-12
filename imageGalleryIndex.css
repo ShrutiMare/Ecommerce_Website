@@ -1,0 +1,158 @@
+
+body{
+    background-color: #F8F8F7;
+}
+btn{
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    opacity: 1;
+    border-radius: .15em;
+}
+#home{
+    text-decoration: underline;
+}
+
+.slideContainer{
+    position: relative;
+    display:block;
+    width: 100%;
+    height: 350px;
+    padding: 40px 0px 5px 0px;
+}
+
+.slideContainer .slides{
+    width:100%;
+    height:100%;
+    position:relative;
+    overflow:hidden;
+}
+
+.slideContainer .slides img{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    object-fit: cover;
+}
+.slideContainer .slides img:not(.active){
+    top: 0;
+    left: -100%;
+}
+
+span.next, span.prev{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 14px;
+    color: #eee;
+    font-size: 24px;
+    font-weight: bold;
+    transition: 0.5s;
+    border-radius: 3px;
+    user-select: none;
+    cursor: pointer;
+    z-index: 1;
+}
+span.next{
+    right: 20px;
+}
+span.prev{
+    left: 20px;
+}
+span.next:hover, span.prev:hover{
+    background-color: #ede6d6;
+    opacity: 0.8;
+    color: #222;
+}
+
+.dotsContainer{
+    position: absolute;
+    bottom: 5px;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.dotsContainer .dot{
+    width: 7px;
+    height: 7px;
+    margin: 0px 2px;
+    border: 0.5px solid #fffee6;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+.dotsContainer .active{
+    background-color: #F8F8F7;
+}
+.div2{
+padding: 30px 0 0 0;
+}
+
+.div2 #welcomeStatement{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 15px;
+    display: flex;
+    position: relative;
+    text-align: justify;
+    background-color: #f5e9ca;
+}
+
+#wel{
+    font-style: italic;
+}
+
+#welcomeStatement{
+    display: flex;
+    justify-content:space-around;
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+}
+
+.innerContent{
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes next1{
+    from{
+        left: 0%
+    }
+    to{
+        left: -100%;
+    }
+}
+@keyframes next2{
+    from{
+        left: 100%
+    }
+    to{
+        left: 0%;
+    }
+}
+
+@keyframes prev1{
+    from{
+        left: 0%
+    }
+    to{
+        left: 100%;
+    }
+}
+@keyframes prev2{
+    from{
+        left: -100%
+    }
+    to{
+        left: 0%;
+    }
+}
